@@ -6,11 +6,11 @@
 # CẤU TRÚC THƯ MỤC
    ```bash
     ├── folder data
-    │
+    │           └── các file .csv chứa dữ liệu 
     ├── folder include
     │           └── các file .h để khai báo 
     ├── folder src
-    │           └── các file .cpp 
+    │           └── các file .cpp triển khai
     ├── file main.cpp
     │
     └── README.md
