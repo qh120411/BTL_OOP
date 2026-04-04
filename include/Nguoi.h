@@ -18,20 +18,20 @@ class Nguoi {
         virtual void docfile(istream &is);
         virtual void luufile(ostream &ou);
 
-        void setten( const string& hoten);
-        string getten() const;
+        void sethoten( const string& hoten);
+        string gethoten() const;
 
-        void setgt(const string& gioitinh);
-        string getgt() const;
+        void setgioitinh(const string& gioitinh);
+        string getgioitinh() const;
 
-        void setnsinh(const string& namsinh);
-        string getnsinh() const;
+        void setnamsinh(const string& namsinh);
+        string getnamsinh() const;
 
         void setquequan(const string& quequan);
         string getquequan() const;
 
-        void setsdt(const string& sodienthoai);
-        string getsdt() const;
+        void setsodienthoai(const string& sodienthoai);
+        string getsodienthoai() const;
 
         void setemail(const string& email);
         string getemail() const;
@@ -39,8 +39,8 @@ class Nguoi {
         void setdiachi(const string& diachi);
         string getdiachi() const;
 
-        void setcccd(const string& socccd);
-        string getcccd() const;
+        void setsocccd(const string& socccd);
+        string getsocccd() const;
 
 };
 #endif
