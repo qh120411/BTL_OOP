@@ -7,12 +7,20 @@
    ```bash
     ├── folder data
     │           └── các file .csv chứa dữ liệu 
-    ├── folder include
-    │           └── các file .h để khai báo 
-    ├── folder src
-    │           └── các file .cpp triển khai
-    ├── file main.cpp
+    ├── folder include (*.h)
+    │           └── folder managers
+    │           └── folder models
+    │           └── folder services
+    │           └── folder utils
+    ├── folder src (*.cpp)
+    │           └── folder managers
+    │           └── folder models
+    │           └── folder services
+    │           └── folder utils
+    ├── file .gitignore
     │
-    └── README.md
+    ├── README.md
+    │
+    └── file main.cpp
    ```
 
