@@ -13,6 +13,29 @@ Giangvien::Giangvien(string ten, string gt, string nsinh,
 
 Giangvien::~Giangvien(){}
 
+void Giangvien::luufile(ostream &ou) {
+    Nguoi::luufile(ou);
+    ou << mgv << "," << bomon << "," << khoa << "," << hocvi << "," << chucvu << "," << chuyennganh << "," 
+       << tinhtrang << endl;
+}
+
+void Giangvien::docfile(istream &is) {
+    Nguoi::docfile(is);
+    getline(is,mgv,',');
+    getline(is,bomon,',');
+    getline(is,khoa, ',');
+    getline(is,hocvi, ',');
+    getline(is,chucvu,',');
+    getline(is,chuyennganh,',');
+    string tmp;
+    getline(is,tmp,',');
+    if (tmp == "DANG_CONG_TAC") tinhtrang = DANG_CONG_TAC;
+    else if ( tmp == "TAM_NGHI") tinhtrang = TAM_NGHI;
+    else if (tmp == "NGHI_THAI_SAN") tinhtrang = NGHI_THAI_SAN;
+    else if ( tmp == "NGHI_HUU") tinhtrang = NGHI_HUU;
+    else if (tmp == "THOI_VIEC") tinhtrang = THOI_VIEC;
+}
+
 void Giangvien::setmgv(const string &magv) {
     mgv = magv;
 }

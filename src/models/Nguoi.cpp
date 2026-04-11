@@ -9,6 +9,21 @@ Nguoi::Nguoi(string ten, string gt, string nsinh, string que, string sdt, string
 
 Nguoi::~Nguoi(){}
 
+void Nguoi::luufile(ostream& ou) {
+    ou << hoten << "," << gioitinh << "," << namsinh << "," << quequan << "," << sodienthoai << ","
+       << email << "," << diachi << "," << socccd << ",";
+}
+
+void Nguoi::docfile(istream& is) {
+    getline(is,hoten, ',');
+    getline(is,gioitinh, ',');
+    getline(is,namsinh, ',');
+    getline(is,quequan, ',');
+    getline(is,sodienthoai,',');
+    getline(is,email, ',');
+    getline(is,diachi, ',');
+    getline(is,socccd, ',');
+}
 
 void Nguoi::sethoten(const string &ten) {
     hoten = ten;

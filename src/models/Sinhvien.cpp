@@ -13,6 +13,28 @@ Sinhvien::Sinhvien(string ten, string gt, string nsinh,
 
 Sinhvien::~Sinhvien(){}
 
+void Sinhvien::luufile(ostream &ou) {
+    Nguoi::luufile(ou);
+    ou << msv << "," << nganh << "," << Khoa << "," << lop << "," << khoahoc << "," << tinhtrang <<endl;
+}
+
+void Sinhvien::docfile(istream &is) {
+    Nguoi::docfile(is);
+    getline(is,msv,',');
+    getline(is,nganh, ',');
+    getline(is,Khoa, ',');
+    getline(is,lop, ',');
+    string tmp;
+    getline(is, tmp, ',');
+    khoahoc = stoi(tmp);
+    getline(is, tmp, ',');
+    if (tmp == "DANG_HOC") tinhtrang = DANG_HOC;
+    else if (tmp == "BAO_LUU") tinhtrang = BAO_LUU;
+    else if (tmp == "TOT_NGHIEP") tinhtrang = TOT_NGHIEP;
+    else if (tmp == "THOI_HOC") tinhtrang = THOI_HOC;
+
+}
+
 void Sinhvien::setmsv(const string &masv) {
     msv = masv;
 } 
