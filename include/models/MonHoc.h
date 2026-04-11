@@ -5,33 +5,48 @@
 
 class MonHoc {
     private:
-        string maMonHoc;
-        string tenMonHoc;
+        std::string maMonHoc;
+        std::string tenMonHoc;
         int soTinChi;
         int soTiet;
-        string monTienQuyet;
-        string khoaPhuTrach;
+        std::string monTienQuyet;
+        std::string khoaPhuTrach;
 
     public:
-        MonHoc();
-        MonHoc(string maMonHoc, string tenMonHoc, int soTinChi, int soTiet, string monTienQuyet, string khoaPhuTrach);
+       MonHoc() {
+            this->maMonHoc = "";
+            this->tenMonHoc = "";
+            this->soTinChi = 0;
+            this->soTiet = 0;
+            this->monTienQuyet = "";
+            this->khoaPhuTrach = "";
+        }
 
-        string getMaMonHoc();
-        string getTenMonHoc();
-        int getSoTinChi();
-        int getSoTiet();
-        string getMonTienQuyet();
-        string getKhoaPhuTrach();
+        MonHoc(std::string maMonHoc, std::string tenMonHoc, int soTinChi, int soTiet, std::string monTienQuyet, std::string khoaPhuTrach) {
+            this->maMonHoc = maMonHoc;
+            this->tenMonHoc = tenMonHoc;
+            this->soTinChi = soTinChi;
+            this->soTiet = soTiet;
+            this->monTienQuyet = monTienQuyet;
+            this->khoaPhuTrach = khoaPhuTrach;
+        }
 
-        void setMaMonHoc(string maMonHoc);
-        void setTenMonHoc(string tenMonHoc);
-        void setSoTinChi(int soTinChi);
-        void setSoTiet(int soTiet);
-        void setMonTienQuyet(string monTienQuyet);
-        void setKhoaPhuTrach(string khoaPhuTrach);
+        std::string getMaMonHoc() const;
+        std::string getTenMonHoc() const;
+        int getSoTinChi() const;
+        int getSoTiet() const;
+        std::string getMonTienQuyet() const;
+        std::string getKhoaPhuTrach() const;
+
+        void setMaMonHoc(const std::string&);
+        void setTenMonHoc(const std::string&);
+        void setSoTinChi(int);
+        void setSoTiet(int);
+        void setMonTienQuyet(const std::string&);
+        void setKhoaPhuTrach(const std::string&);
 
         void nhap();
-        void xuat();
+        void xuat() const;
 };
 
 #endif

@@ -1,77 +1,57 @@
-#include <../include/MonHoc.h>
+#include <../include/models/MonHoc.h>
 #include <string>
 #include <iostream>
 
-MonHoc::MonHoc() {
-    this->maMonHoc = "";
-    this->tenMonHoc = "";
-    this->soTinChi = 0;
-    this->soTiet = 0;
-    this->monTienQuyet = "";
-    this->khoaPhuTrach = "";
-}
+std::string MonHoc::getMaMonHoc() const { return this->maMonHoc; }
 
-MonHoc::MonHoc(string maMonHoc, string tenMonHoc, int soTinChi, int soTiet, string monTienQuyet, string khoaPhuTrach) {
-    this->maMonHoc = maMonHoc;
-    this->tenMonHoc = tenMonHoc;
-    this->soTinChi = soTinChi;
-    this->soTiet = soTiet;
-    this->monTienQuyet = monTienQuyet;
-    this->khoaPhuTrach = khoaPhuTrach;
-}
+std::string MonHoc::getTenMonHoc() const { return this->tenMonHoc; }
+
+int MonHoc::getSoTinChi() const { return this->soTinChi; }
+
+int MonHoc::getSoTiet() const { return this->soTiet; }
+
+std::string MonHoc::getMonTienQuyet() const { return this->monTienQuyet; }
+
+std::string MonHoc::getKhoaPhuTrach() const { return this->khoaPhuTrach; }
 
 
 
-string MonHoc::getMaMonHoc() { return this->maMonHoc; }
+void MonHoc::setMaMonHoc(const std::string& maMonHoc) { this->maMonHoc = maMonHoc; }
 
-string MonHoc::getTenMonHoc() { return this->tenMonHoc; }
-
-int MonHoc::getSoTinChi() { return this->soTinChi; }
-
-int MonHoc::getSoTiet() { return this->soTiet; }
-
-string MonHoc::getMonTienQuyet() { return this->monTienQuyet; }
-
-string MonHoc::getKhoaPhuTrach() { return this->khoaPhuTrach; }
-
-
-
-void MonHoc::setMaMonHoc(string maMonHoc) { this->maMonHoc = maMonHoc; }
-
-void MonHoc::setTenMonHoc(string tenMonHoc) { this->tenMonHoc = tenMonHoc; }
+void MonHoc::setTenMonHoc(const std::string& tenMonHoc) { this->tenMonHoc = tenMonHoc; }
 
 void MonHoc::setSoTinChi(int soTinChi) { this->soTinChi = soTinChi; }
 
 void MonHoc::setSoTiet(int soTiet) { this->soTiet = soTiet; }
 
-void MonHoc::setMonTienQuyet(string monTienQuyet) { this->monTienQuyet = monTienQuyet; }
+void MonHoc::setMonTienQuyet(const std::string& monTienQuyet) { this->monTienQuyet = monTienQuyet; }
 
-void MonHoc::setKhoaPhuTrach(string khoaPhuTrach) { this->khoaPhuTrach = khoaPhuTrach; }
+void MonHoc::setKhoaPhuTrach(const std::string& khoaPhuTrach) { this->khoaPhuTrach = khoaPhuTrach; }
 
 
 
 void MonHoc::nhap() {
-    cout << "Nhap ma mon hoc: ";
-    cin.ignore();
-    getline(cin, this->maMonHoc);
+    std::cout << "Nhap ma mon hoc: ";
+    std::cin.ignore();
+    getline(std::cin, this->maMonHoc);
 
-    cout << "Nhap ten mon hoc: ";
-    getline(cin, this->tenMonHoc);
+    std::cout << "Nhap ten mon hoc: ";
+    getline(std::cin, this->tenMonHoc);
 
-    cout << "Nhap so tin chi: ";
-    cin >> this->soTinChi;
+    std::cout << "Nhap so tin chi: ";
+    std::cin >> this->soTinChi;
 
-    cout << "Nhap so tiet: ";
-    cin >> this->soTiet;
+    std::cout << "Nhap so tiet: ";
+    std::cin >> this->soTiet;
 
-    cout << "Nhap mon tien quyet: ";
-    cin.ignore();
-    getline(cin, this->monTienQuyet);
+    std::cout << "Nhap mon tien quyet: ";
+    std::cin.ignore();
+    getline(std::cin, this->monTienQuyet);
 
-    cout << "Nhap khoa phu trach: ";
-    getline(cin, this->khoaPhuTrach);
+    std::cout << "Nhap khoa phu trach: ";
+    getline(std::cin, this->khoaPhuTrach);
 }
 
-void xuat() {
+void MonHoc::xuat() const {
     
 }

@@ -1,7 +1,9 @@
-#include<bits/stdc++.h>
-
-using namespace std;
+#include "include/models/MonHoc.h"
 
 int main() {
-    cout << "Day la bai tap lon...";
+    MonHoc mh;
+    mh.nhap();
+    mh.xuat();
+
+    return 0;
 }
