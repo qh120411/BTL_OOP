@@ -1,4 +1,4 @@
-#include<../include/Giangvien.h>
+#include<../include/models/Giangvien.h>
 #include<bits/stdc++.h>
 
 using namespace std;

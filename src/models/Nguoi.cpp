@@ -1,4 +1,4 @@
-#include<../include/Nguoi.h>
+#include<../include/models/Nguoi.h>
 #include<bits/stdc++.h>
 
 using namespace std;

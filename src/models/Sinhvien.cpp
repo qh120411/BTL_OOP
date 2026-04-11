@@ -1,4 +1,4 @@
-#include<../include/Sinhvien.h>
+#include<../include/models/Sinhvien.h>
 #include<bits/stdc++.h>
 
 using namespace std;
