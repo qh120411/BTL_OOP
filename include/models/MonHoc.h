@@ -21,7 +21,6 @@ class MonHoc {
             this->monTienQuyet = "";
             this->khoaPhuTrach = "";
         }
-
         MonHoc(std::string maMonHoc, std::string tenMonHoc, int soTinChi, int soTiet, std::string monTienQuyet, std::string khoaPhuTrach) {
             this->maMonHoc = maMonHoc;
             this->tenMonHoc = tenMonHoc;
