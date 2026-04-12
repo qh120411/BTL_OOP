@@ -1,7 +1,9 @@
-#include<bits/stdc++.h>
-
-using namespace std;
+#include "include/models/LopHocPhan.h"
 
 int main() {
-    cout << "Day la bai tap lon...";
+    LopHocPhan mh;
+    mh.nhap();
+    mh.xuat();
+
+    return 0;
 }
