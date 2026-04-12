@@ -1,9 +1,10 @@
-#include "include/models/DangKyHoc.h"
+#include "include/managers/MonHocManager.h"
 
 int main() {
-    DangKyHoc mh;
-    mh.nhap();
-    mh.xuat();
+    MonHocManager mh;
+    mh.themMonHoc();
+    mh.suaMonHoc("123");
+    mh.hienThiDanhSach();
 
     return 0;
 }
