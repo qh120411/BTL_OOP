@@ -29,7 +29,7 @@ void Nguoi::docfile(istream& is) {
 void Nguoi::nhap() {
     this->hoten = InputHelper::inputLine("Nhap vao ho ten: ");
     this->gioitinh = InputHelper::inputLine("Nhap vao gioi tinh (nam/nu): ");
-    this->namsinh = InputHelper::inputLine("Nhap vao ngay/thang/namsinh: ");
+    this->namsinh = InputHelper::inputDate("Nhap vao ngay/thang/nam sinh: ");
     this->quequan = InputHelper::inputLine("Nhap vao que quan: ");
     this->sodienthoai = InputHelper::inputLine("Nhap vao so dien thoai: ");
     this->email = InputHelper::inputLine("Nhap vao dia chi noi o: ");
