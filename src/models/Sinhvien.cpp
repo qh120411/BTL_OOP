@@ -35,6 +35,29 @@ void Sinhvien::docfile(istream &is) {
 
 }
 
+void Sinhvien::nhap() {
+    Nguoi::nhap();
+    this->msv = InputHelper::inputLine("Nhap vao ma sinh vien: ");
+    this->nganh = InputHelper::inputLine("Nhap vao nganh: ");
+    this->Khoa = InputHelper::inputLine("Nhap vao khoa: ");
+    this->lop = InputHelper::inputLine("Nhap vao lop cua sinh vien: ");
+    this->khoahoc = InputHelper::inputInt("Nhap vao khoa hoc cua sinh vien: ");
+    cout << "Chon tinh trang sinh vien:\n";
+    cout << "1. Dang hoc\n";
+    cout << "2. Bao luu\n";
+    cout << "3. Tot nghiep\n";
+    cout << "4. Thoi hoc\n";
+
+    int luaChon = InputHelper::inputInt("Nhap lua chon: ", 1, 4);
+
+    switch (luaChon) {
+        case 1: this->tinhtrang = DANG_HOC; break;
+        case 2: this->tinhtrang = BAO_LUU; break;
+        case 3: this->tinhtrang = TOT_NGHIEP; break;
+        case 4: this->tinhtrang = THOI_HOC; break;
+    }
+}
+
 void Sinhvien::setmsv(const string &masv) {
     msv = masv;
 } 

@@ -28,6 +28,10 @@ class Sinhvien : public Nguoi {
         virtual void docfile(istream &is) override;
         virtual void luufile(ostream &ou) override;
 
+        virtual void nhap() ;
+        virtual void xuat() const;
+
+
         void setmsv (const string& msv);
         string getmsv()const;
 

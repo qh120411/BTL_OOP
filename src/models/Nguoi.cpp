@@ -1,5 +1,6 @@
 #include<../include/models/Nguoi.h>
 #include<bits/stdc++.h>
+#include<../include/utils/InputHelper.h>
 
 using namespace std;
 
@@ -23,6 +24,21 @@ void Nguoi::docfile(istream& is) {
     getline(is,email, ',');
     getline(is,diachi, ',');
     getline(is,socccd, ',');
+}
+
+void Nguoi::nhap() {
+    this->hoten = InputHelper::inputLine("Nhap vao ho ten: ");
+    this->gioitinh = InputHelper::inputLine("Nhap vao gioi tinh (nam/nu): ");
+    this->namsinh = InputHelper::inputLine("Nhap vao ngay/thang/namsinh: ");
+    this->quequan = InputHelper::inputLine("Nhap vao que quan: ");
+    this->sodienthoai = InputHelper::inputLine("Nhap vao so dien thoai: ");
+    this->email = InputHelper::inputLine("Nhap vao dia chi noi o: ");
+    this->socccd = InputHelper::inputLine("Nhap vao so cccd: ");
+}
+
+void Nguoi::xuat() const {
+    cout << hoten << " " << gioitinh << " " << namsinh << " " << quequan << " " << sodienthoai << " " << email << 
+            diachi << " " << socccd << " ";
 }
 
 void Nguoi::sethoten(const string &ten) {

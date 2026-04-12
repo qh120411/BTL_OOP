@@ -42,5 +42,8 @@ class Nguoi {
         void setsocccd(const string& socccd);
         string getsocccd() const;
 
+        virtual void nhap();
+        virtual void xuat() const;
+
 };
 #endif

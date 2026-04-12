@@ -5,7 +5,7 @@
 using namespace std;
 
 enum tinhtrangGV {
-    DANG_CONG_TAC,
+    DANG_GIANG_DAY,
     TAM_NGHI,
     NGHI_THAI_SAN,
     NGHI_HUU,
@@ -25,12 +25,15 @@ class Giangvien : public Nguoi {
         public :
             Giangvien(string hoten = " ", string gioitinh = " ", string namsinh = " ", string quequan = " ", string sodienthoai = " ",
                 string email = " ", string diachi = " ", string socccd = " ", string mgv = " ", string bomon = " ", string khoa = " ",
-                string hocvi = " ", string chucvu = " ", string chuyennganh = " ", tinhtrangGV tinhtrang = DANG_CONG_TAC );
+                string hocvi = " ", string chucvu = " ", string chuyennganh = " ", tinhtrangGV tinhtrang = DANG_GIANG_DAY);
             virtual ~Giangvien();
 
             virtual void hienthithongtin() override;
             virtual void docfile(istream &is) override;
             virtual void luufile(ostream &ou) override;
+
+            virtual void nhap() ;
+            virtual void xuat() const;
 
             void setmgv ( const string &mgv);
             string getmgv() const;
