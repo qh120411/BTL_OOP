@@ -1,4 +1,5 @@
 #include <../include/models/MonHoc.h>
+#include <../include/utils/InputHelper.h>
 #include <string>
 #include <iostream>
 
@@ -31,25 +32,17 @@ void MonHoc::setKhoaPhuTrach(const std::string& khoaPhuTrach) { this->khoaPhuTra
 
 
 void MonHoc::nhap() {
-    std::cout << "Nhap ma mon hoc: ";
-    std::cin.ignore();
-    getline(std::cin, this->maMonHoc);
+    this->maMonHoc = InputHelper::inputLine("Nhap ma mon hoc: ");
 
-    std::cout << "Nhap ten mon hoc: ";
-    getline(std::cin, this->tenMonHoc);
+    this->tenMonHoc = InputHelper::inputLine("Nhap ten mon hoc: ");
 
-    std::cout << "Nhap so tin chi: ";
-    std::cin >> this->soTinChi;
+    this->soTinChi = InputHelper::inputInt("Nhap so tin chi: ", 1, 10);
 
-    std::cout << "Nhap so tiet: ";
-    std::cin >> this->soTiet;
+    this->soTiet = InputHelper::inputInt("Nhap so tiet: ", 1, 50);
 
-    std::cout << "Nhap mon tien quyet: ";
-    std::cin.ignore();
-    getline(std::cin, this->monTienQuyet);
+    this->monTienQuyet = InputHelper::inputLine("Nhap mon tien quyet: ");
 
-    std::cout << "Nhap khoa phu trach: ";
-    getline(std::cin, this->khoaPhuTrach);
+    this->khoaPhuTrach = InputHelper::inputLine("Nhap khoa phu trach: ");
 }
 
 void MonHoc::xuat() const {

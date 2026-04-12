@@ -1,7 +1,7 @@
-#include "include/models/MonHoc.h"
+#include "include/models/LopHocPhan.h"
 
 int main() {
-    MonHoc mh;
+    LopHocPhan mh;
     mh.nhap();
     mh.xuat();
 

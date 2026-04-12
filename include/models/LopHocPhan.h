@@ -1,3 +1,6 @@
+#ifndef LOPHOCPHAN_H
+#define LOPHOCPHAN_H
+
 #include <string>
 
 class LopHocPhan {
@@ -61,3 +64,5 @@ class LopHocPhan {
         void nhap();
         void xuat() const;
 };
+
+#endif

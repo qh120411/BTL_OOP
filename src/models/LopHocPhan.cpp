@@ -1,4 +1,5 @@
 #include <../include/models/LopHocPhan.h>
+#include <../include/utils/InputHelper.h>
 #include <string>
 #include <iostream>
 
@@ -53,30 +54,21 @@ void LopHocPhan::giamSiSo() {
 
 
 void LopHocPhan::nhap() {
-    std::cout << "Nhap ma lop hoc phan: ";
-    std::cin.ignore();
-    getline(std::cin, this->maLHP);
+    this->maLHP = InputHelper::inputLine("Nhap ma lop hoc phan: ");
 
-    std::cout << "Nhap ma mon hoc: ";
-    getline(std::cin, this->maMon);
+    this->maMon = InputHelper::inputLine("Nhap ma mon hoc: ");
 
-    std::cout << "Nhap ma giang vien: ";
-    getline(std::cin, this->maGV);
+    this->maGV = InputHelper::inputLine("Nhap ma giang vien: ");
 
-    std::cout << "Nhap hoc ky: ";
-    getline(std::cin, this->hocKy);
+    this->hocKy = InputHelper::inputLine("Nhap hoc ky: ");
 
-    std::cout << "Nhap nam hoc: ";
-    getline(std::cin, this->namHoc);
+    this->namHoc = InputHelper::inputLine("Nhap nam hoc: ");
 
-    std::cout << "Nhap phong hoc: ";
-    getline(std::cin, this->phongHoc);
+    this->phongHoc = InputHelper::inputLine("Nhap phong hoc: ");
 
-    std::cout << "Nhap lich hoc: ";
-    getline(std::cin, this->lichHoc);
+    this->lichHoc = InputHelper::inputLine("Nhap lich hoc: ");
 
-    std::cout << "Nhap si so toi da: ";
-    std::cin >> this->siSoToiDa;
+    this->siSoToiDa = InputHelper::inputInt("Nhap si so toi da: ", 1, 100);
 
     this->siSoHienTai = 0;
 }
