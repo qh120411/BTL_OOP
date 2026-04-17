@@ -1,7 +1,7 @@
-#include "include/models/LopHocPhan.h"
+#include "include/models/DangKyHoc.h"
 
 int main() {
-    LopHocPhan mh;
+    DangKyHoc mh;
     mh.nhap();
     mh.xuat();
 

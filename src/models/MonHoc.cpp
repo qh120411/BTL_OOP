@@ -1,7 +1,6 @@
 #include <../include/models/MonHoc.h>
 #include <../include/utils/InputHelper.h>
 #include <string>
-#include <iostream>
 
 std::string MonHoc::getMaMonHoc() const { return this->maMonHoc; }
 
