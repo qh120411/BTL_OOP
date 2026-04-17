@@ -42,7 +42,7 @@ void Sinhvien::nhap() {
     this->nganh = InputHelper::inputLine("Nhap vao nganh: ");
     this->Khoa = InputHelper::inputLine("Nhap vao khoa: ");
     this->lop = InputHelper::inputLine("Nhap vao lop cua sinh vien: ");
-    this->khoahoc = InputHelper::inputInt("Nhap vao khoa hoc cua sinh vien: ");
+    this->khoahoc = InputHelper::inputInt("Nhap vao khoa hoc cua sinh vien: ",1, 66);
     cout << "Chon tinh trang sinh vien:\n";
     cout << "1. Dang hoc\n";
     cout << "2. Bao luu\n";
