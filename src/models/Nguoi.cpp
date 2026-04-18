@@ -1,5 +1,6 @@
 #include<../include/models/Nguoi.h>
 #include<bits/stdc++.h>
+#include<../include/utils/InputHelper.h>
 
 using namespace std;
 
@@ -9,6 +10,36 @@ Nguoi::Nguoi(string ten, string gt, string nsinh, string que, string sdt, string
 
 Nguoi::~Nguoi(){}
 
+void Nguoi::luufile(ostream& ou) {
+    ou << hoten << "," << gioitinh << "," << namsinh << "," << quequan << "," << sodienthoai << ","
+       << email << "," << diachi << "," << socccd << ",";
+}
+
+void Nguoi::docfile(istream& is) {
+    getline(is,hoten, ',');
+    getline(is,gioitinh, ',');
+    getline(is,namsinh, ',');
+    getline(is,quequan, ',');
+    getline(is,sodienthoai,',');
+    getline(is,email, ',');
+    getline(is,diachi, ',');
+    getline(is,socccd, ',');
+}
+
+void Nguoi::nhap() {
+    this->hoten = InputHelper::inputLine("Nhap vao ho ten: ");
+    this->gioitinh = InputHelper::inputLine("Nhap vao gioi tinh (nam/nu): ");
+    this->namsinh = InputHelper::inputDate("Nhap vao ngay/thang/nam sinh: ");
+    this->quequan = InputHelper::inputLine("Nhap vao que quan: ");
+    this->sodienthoai = InputHelper::inputLine("Nhap vao so dien thoai: ");
+    this->email = InputHelper::inputLine("Nhap vao dia chi noi o: ");
+    this->socccd = InputHelper::inputLine("Nhap vao so cccd: ");
+}
+
+void Nguoi::xuat() const {
+    cout << hoten << " " << gioitinh << " " << namsinh << " " << quequan << " " << sodienthoai << " " << email << 
+            diachi << " " << socccd << " ";
+}
 
 void Nguoi::sethoten(const string &ten) {
     hoten = ten;
