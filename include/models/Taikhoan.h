@@ -8,9 +8,9 @@ using namespace std;
 
 class TaiKhoan {
     protected :
-        string taikhoan, matkhau, role;
+        string taikhoan, matkhau, role, trangthai;
     public :
-        TaiKhoan(string taikhoan = " ", string matkhau = " ", string role = " ");
+        TaiKhoan(string taikhoan = " ", string matkhau = " ", string role = " ", string trangthai = " ");
         
         virtual ~TaiKhoan();
 
@@ -22,6 +22,9 @@ class TaiKhoan {
 
         void setrole(const string& role);
         string getrole() const;
+
+        void settrangthai(const string& trangthai);
+        string gettrangthai() const;
 
         bool checklog(const string& filename);
 
