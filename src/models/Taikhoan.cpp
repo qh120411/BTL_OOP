@@ -6,7 +6,7 @@
 
 using namespace std;
 
-TaiKhoan::TaiKhoan(string tk, string mk, string quyen) : taikhoan(tk), matkhau(mk), role(quyen) {};
+TaiKhoan::TaiKhoan(string tk, string mk, string quyen, string tt) : taikhoan(tk), matkhau(mk), role(quyen), trangthai(tt) {}
 
 TaiKhoan::~TaiKhoan(){}
 
@@ -31,6 +31,15 @@ void TaiKhoan::setrole(const string& quyen) {
 string TaiKhoan::getrole() const{
     return role;
 }
+
+void TaiKhoan::settrangthai(const string& tt) {
+    trangthai = tt;
+}
+
+string TaiKhoan::gettrangthai() const{
+    return trangthai;
+}
+
 bool TaiKhoan::checklog(const string& ten_file) {
     string tkinput, mkinput;
     cout << "Nhap vao tai khoan: ";
@@ -42,18 +51,26 @@ bool TaiKhoan::checklog(const string& ten_file) {
     string line;
     while(getline(file, line)){
         stringstream ss(line);
-        string tk, mk, quyen;
+        string tk, mk, quyen, tt;
 
         getline(ss,tk,',');
         getline(ss, mk, ',');
         getline(ss, quyen, ',');
+        getline(ss,tt, ',');
 
         if ( tk == tkinput && mk == mkinput ) {
+            if (tt == "locked") {
+                cout << "Tai khoan da bi khoa\n";
+                return false;
+            }
             this->taikhoan = tk;
             this->matkhau = mk;
             this->role = quyen;
+            this->trangthai = tt;
+
             return true;
         }
     }
+    cout << "Sai tai khoan or mat khau\n";
     return false;
 }
