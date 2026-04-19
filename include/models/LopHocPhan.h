@@ -2,6 +2,7 @@
 #define LOPHOCPHAN_H
 
 #include <string>
+#include <vector>
 
 class LopHocPhan {
     private:
@@ -57,12 +58,17 @@ class LopHocPhan {
         void setPhongHoc(const std::string&);
         void setLichHoc(const std::string&);
         void setSiSoToiDa(int);
+        void setSiSoHienTai(int);
 
         void tangSiSo();
         void giamSiSo();
 
         void nhap();
         void xuat() const;
+
+        static std::string csvHeader();
+        std::string toCsvRow() const;
+        static LopHocPhan fromCsvRow(const std::vector<std::string>&);
 };
 
 #endif
