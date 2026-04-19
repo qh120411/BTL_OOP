@@ -1,10 +1,26 @@
-#include "include/managers/MonHocManager.h"
+#include <iostream>
+#include "include/models/Taikhoan.h"
+#include "include/services/Menu.h"
+
+using namespace std;
 
 int main() {
-    MonHocManager mh;
-    mh.themMonHoc();
-    mh.suaMonHoc("123");
-    mh.hienThiDanhSach();
+    TaiKhoan tk;
+    while (true) {
+        if (tk.checklog("data/Taikhoan.csv")) {
+            cout << "Dang nhap thanh cong\n";
+            string role = tk.getrole();
 
+            if (role == "admin") {
+                menuAdmin();
+            }
+            else if (role == "gv") {
+                menuGiangVien();
+            }
+            else if (role == "sv") {
+                menuSinhVien();
+            }
+        }
+    }
     return 0;
 }
