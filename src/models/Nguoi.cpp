@@ -48,8 +48,6 @@ void Nguoi::xuat() const
     cout << "Que quan: " << quequan << "\n";
     cout << "So dien thoai: " << sodienthoai << "\n";
     cout << "Email: " << email << "\n";
-    cout << "Dia chi: " << diachi << "\n";
-    cout << "So CCCD: " << socccd << "\n";
 }
 
 void Nguoi::hienthithongtin()
