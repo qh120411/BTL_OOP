@@ -1,10 +1,11 @@
 #ifndef GIANGVIEN_H
 #define GIANGVIEN_H
-#include<Nguoi.h>
+#include "Nguoi.h"
 
 using namespace std;
 
-enum tinhtrangGV {
+enum tinhtrangGV
+{
     DANG_GIANG_DAY,
     TAM_NGHI,
     NGHI_THAI_SAN,
@@ -12,51 +13,54 @@ enum tinhtrangGV {
     THOI_VIEC
 };
 
-class Giangvien : public Nguoi {
-    protected :
-        string mgv;
-        string bomon;
-        string khoa;
-        string hocvi;
-        string chucvu;
-        string chuyennganh;
-        tinhtrangGV tinhtrang;
-    
-        public :
-            Giangvien(string hoten = " ", string gioitinh = " ", string namsinh = " ", string quequan = " ", string sodienthoai = " ",
-                string email = " ", string diachi = " ", string socccd = " ", string mgv = " ", string bomon = " ", string khoa = " ",
-                string hocvi = " ", string chucvu = " ", string chuyennganh = " ", tinhtrangGV tinhtrang = DANG_GIANG_DAY);
-            virtual ~Giangvien();
+class Giangvien : public Nguoi
+{
+protected:
+    string mgv;
+    string bomon;
+    string khoa;
+    string hocvi;
+    string chucvu;
+    string chuyennganh;
+    tinhtrangGV tinhtrang;
 
-            virtual void hienthithongtin() override;
-            virtual void docfile(istream &is) override;
-            virtual void luufile(ostream &ou) override;
+public:
+    Giangvien(string hoten = " ", string gioitinh = " ", string namsinh = " ", string quequan = " ", string sodienthoai = " ",
+              string email = " ", string diachi = " ", string socccd = " ", string mgv = " ", string bomon = " ", string khoa = " ",
+              string hocvi = " ", string chucvu = " ", string chuyennganh = " ", tinhtrangGV tinhtrang = DANG_GIANG_DAY);
+    virtual ~Giangvien();
 
-            virtual void nhap() ;
-            virtual void xuat() const;
+    virtual void hienthithongtin() override;
+    virtual void docfile(istream &is) override;
+    virtual void luufile(ostream &ou) override;
 
-            void setmgv ( const string &mgv);
-            string getmgv() const;
+    virtual void nhap();
+    virtual void xuat() const;
 
-            void setbomon ( const string &bomon);
-            string getbomon() const;
+    void setmgv(const string &mgv);
+    string getmgv() const;
 
-            void setkhoa ( const string &khoa);
-            string getkhoa() const;
+    void setbomon(const string &bomon);
+    string getbomon() const;
 
-            void sethocvi ( const string &hocvi);
-            string gethocvi() const;
+    void setkhoa(const string &khoa);
+    string getkhoa() const;
 
-            void setchucvu ( const string &chucvu);
-            string getchucvu() const;
+    void sethocvi(const string &hocvi);
+    string gethocvi() const;
 
-            void setchuyennganh ( const string &chuyennganh);
-            string getchuyennganh() const;
+    void setchucvu(const string &chucvu);
+    string getchucvu() const;
 
-            void settinhtranggv(tinhtrangGV tinhtrang);
-            tinhtrangGV gettinhtranggv() const;
+    void setchuyennganh(const string &chuyennganh);
+    string getchuyennganh() const;
 
+    void settinhtranggv(tinhtrangGV tinhtrang);
+    tinhtrangGV gettinhtranggv() const;
 
+    static std::string csvHeader();
+    std::string toCsvRow() const;
+    static Giangvien fromCsvRow(const std::vector<std::string> &fields);
 };
 
 #endif
