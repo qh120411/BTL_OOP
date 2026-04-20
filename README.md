@@ -42,21 +42,21 @@
 - Quản lý Sinh viên: Thêm, sửa, xóa, hiển thị danh sách
 - Quản lý Giảng viên: Thêm, sửa, xóa, hiển thị danh sách
 - Quản lý Môn học: Thêm, sửa, xóa, hiển thị danh sách
-- Quản lý Tài khoản (chưa triển khai)
-- Phân công giảng viên dạy môn (chưa triển khai)
+- Quản lý Tài khoản 
+- Phân công giảng viên dạy môn
 
 ### 3. Menu Giảng viên
 - Xem thông tin cá nhân
-- Xem thời khóa biểu (chưa triển khai)
-- Xem danh sách sinh viên theo môn (chưa triển khai)
+- Xem thời khóa biểu 
+- Xem danh sách sinh viên theo môn 
 - Nhập/sửa điểm sinh viên
 
 ### 4. Menu Sinh viên
 - Xem thông tin cá nhân
 - Xem điểm các môn
 - Đăng ký môn học
-- Xem lịch học (chưa triển khai)
-- Xem giảng viên dạy môn (chưa triển khai)
+- Xem lịch học 
+- Xem giảng viên dạy môn 
 
 ## CẤU TRÚC DỮ LIỆU
 
@@ -93,7 +93,7 @@
 4. Dữ liệu sẽ được lưu tự động vào file CSV.
 
 ## NHÓM THỰC HIỆN
-- **Nhóm 9**: [Tên các thành viên]
+- **Nhóm 9**: Trần Quang Huy, Nguyễn Văn Hùng, Lê Đình Thành
 
 ## LƯU Ý
 - Chương trình sử dụng tiếng Việt trong giao diện.
