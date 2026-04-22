@@ -14,7 +14,7 @@ int main()
             cout << "Dang nhap thanh cong\n";
             string role = tk.getrole();
 
-            // Convert role to lowercase for comparison
+            
             for (int i = 0; i < role.length(); i++)
             {
                 role[i] = tolower(role[i]);
@@ -32,13 +32,14 @@ int main()
             {
                 menuSinhVien(tk.getDinhDanhNguoiDung());
             }
-            break; // exit after successful login and menu
+            break;
         }
         else
         {
             cout << "Dang nhap that bai. Thu lai? (y/n): ";
             char choice;
             cin >> choice;
+            cin.ignore();
             if (choice != 'y' && choice != 'Y')
             {
                 break;
